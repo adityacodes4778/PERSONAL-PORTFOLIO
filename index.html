@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CyberDev - Full Stack Developer</title>
+    <title>Aditya</title>
     <style>
       :root {
         --bg-color: #0f0f0f;
@@ -79,7 +79,7 @@
         width: 100%;
       }
 
-      /* Smooth scrolling */
+     
       html {
         scroll-behavior: smooth;
       }
@@ -438,14 +438,14 @@
       }
 
       .skills-section {
-        padding: 80px 40px 100px 40px; /* Increased bottom padding */
+        padding: 80px 40px 100px 40px; 
         background: var(--bg-color);
       }
 
       .skills-section h2 {
         font-size: 36px;
         color: var(--accent-color);
-        margin-bottom: 40px; /* Increased margin for better spacing */
+        margin-bottom: 40px; 
         text-align: center;
         position: relative;
       }
@@ -468,15 +468,15 @@
         justify-content: center;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px; /* Added padding to prevent border collision */
+        padding: 0 20px; 
       }
 
       .skill-box {
         flex: 1;
-        min-width: 280px; /* Slightly increased for better content fit */
-        max-width: 350px; /* Added max-width for better control */
+        min-width: 280px;
+        max-width: 350px; 
         background-color: var(--box-bg);
-        padding: 30px 25px; /* Increased padding for better spacing */
+        padding: 30px 25px; 
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -484,7 +484,7 @@
         overflow: hidden;
         cursor: pointer;
         border: 2px solid transparent;
-        margin-bottom: 20px; /* Added margin for better spacing */
+        margin-bottom: 20px; 
       }
 
       .skill-box::before {
@@ -516,7 +516,7 @@
 
       .skill-box h3 {
         color: var(--accent-color);
-        margin-bottom: 15px; /* Increased margin for better spacing */
+        margin-bottom: 15px; 
         font-size: 20px;
         transition: all 0.3s ease;
         position: relative;
@@ -534,7 +534,7 @@
         transition: all 0.3s ease;
         position: relative;
         z-index: 2;
-        font-size: 16px; /* Explicit font size for consistency */
+        font-size: 16px; 
       }
 
       .skill-box:hover p {
@@ -559,8 +559,8 @@
 
       .skill-icon {
         position: absolute;
-        top: 25px; /* Adjusted for better positioning */
-        right: 25px; /* Adjusted for better positioning */
+        top: 25px; 
+        right: 25px; 
         font-size: 24px;
         opacity: 0.3;
         transition: all 0.3s ease;
@@ -573,7 +573,7 @@
       }
 
       .contact-section {
-        padding: 60px 40px; /* Increased padding for better spacing */
+        padding: 60px 40px; 
         background-color: var(--box-bg);
       }
 
@@ -601,7 +601,7 @@
         flex-direction: column;
         gap: 15px;
         max-width: 500px;
-        margin: 0 auto; /* Center the form */
+        margin: 0 auto; 
       }
 
       form input,
@@ -644,11 +644,11 @@
 
       @media (max-width: 768px) {
         .skills-section {
-          padding: 60px 20px 80px 20px; /* Adjusted for mobile */
+          padding: 60px 20px 80px 20px;
         }
 
         .skill-boxes {
-          padding: 0 10px; /* Reduced padding for mobile */
+          padding: 0 10px; 
         }
 
         .skill-box {
@@ -816,7 +816,7 @@
     </section>
 
     <script>
-      // Smooth scroll navigation
+      
       document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -830,13 +830,13 @@
         });
       });
 
-      // Mobile menu toggle
+     
       function toggleMenu() {
         const navMenu = document.getElementById("navMenu");
         navMenu.classList.toggle("active");
       }
 
-      // Close mobile menu when clicking on a link
+      
       document.querySelectorAll(".nav-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           const navMenu = document.getElementById("navMenu");
@@ -844,7 +844,7 @@
         });
       });
 
-      // Close mobile menu when clicking outside
+      // Close mobile 
       document.addEventListener("click", (e) => {
         const navMenu = document.getElementById("navMenu");
         const menuToggle = document.querySelector(".menu-toggle");
@@ -854,10 +854,10 @@
         }
       });
 
-      // Add click interaction for skill boxes
+      // clickk interaction
       document.querySelectorAll(".skill-box").forEach((box) => {
         box.addEventListener("click", function () {
-          // Add a subtle click feedback
+          
           this.style.transform = "translateY(-10px) scale(0.98)";
           setTimeout(() => {
             this.style.transform = "translateY(-10px) scale(1.05)";
@@ -865,7 +865,7 @@
         });
       });
 
-      // Add click interaction for profile picture
+      //  interaction for profile picture
       document
         .querySelector(".profile-pic-container")
         .addEventListener("click", function () {
@@ -875,7 +875,7 @@
           }, 150);
         });
 
-      // Add click interaction for connect button
+      //  click interaction for connect button
       document
         .querySelector(".hero-text button")
         .addEventListener("click", function () {
@@ -885,7 +885,7 @@
           }, 150);
         });
 
-      // Optimize animations based on device capabilities
+      
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
@@ -897,7 +897,7 @@
         );
       }
 
-      // Handle resize events for better responsiveness
+     
       window.addEventListener("resize", () => {
         const navMenu = document.getElementById("navMenu");
         if (window.innerWidth > 768) {
