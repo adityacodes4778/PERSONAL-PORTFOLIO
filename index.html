@@ -807,43 +807,15 @@
     <section id="contact" class="contact-section">
       <h2>Contact Me</h2>
 
-      <form id="contactForm">
+     <form action="https://formsubmit.co/adityakrjha418@gmail.com" method="POST">
+       <input type="hidden" name="_next" value="https://adityacodes4778.github.io/PERSONAL-PORTFOLIO/" />
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
         <textarea rows="5" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <p id="thankYou" style="display:none; color: lightgreen; font-weight: bold;">
-  Thanks! Your message has been sent.
-</p>
-      <script>
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); 
 
-    //form submit api
-    fetch("https://formsubmit.co/adityakrjha418@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        name: this.name.value,
-        email: this.email.value,
-        message: this.message.value
-      })
-    })
-    .then(response => {
-      if (response.ok) {
-        // Show thank you message
-        document.getElementById("thankYou").style.display = "block";
-        this.reset();
-      } else {
-        alert("Oops! Something went wrong.");
-      }
-    });
-  });
-</script>
+
     </section>
 
     <script>
