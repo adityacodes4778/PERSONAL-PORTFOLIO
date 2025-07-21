@@ -661,6 +661,56 @@
           font-size: 28px;
         }
       }
+      .menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: var(--accent-color);
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 70vh;
+  width: 50vw;
+  background-color: var(--box-bg); /* Use a solid variable or replace with solid color like #111 */
+  padding: 100px 30px 30px;
+  z-index: 1001;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav a {
+  margin: 15px 0;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mobile-nav a:hover {
+  color: var(--accent-color);
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
     </style>
   </head>
   <body>
@@ -674,6 +724,16 @@
 
         <a href="#contact">Contact</a>
       </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Mobile Menu -->
+  <div id="navMenu" class="mobile-nav">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="https://github.com/adityacodes4778" target="_blank" onclick="closeMenu()">Projects</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
     </header>
 
     <section id="home" class="hero">
@@ -938,6 +998,29 @@
           navMenu.classList.remove("active");
         }
       });
+        // Toggle mobile menu
+  function toggleMenu() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("navMenu").classList.remove("active");
+  }
+
+  // Optional: Close menu if clicked outside
+  document.addEventListener("click", function (e) {
+    const navMenu = document.getElementById("navMenu");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    if (
+      navMenu.classList.contains("active") &&
+      !navMenu.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      navMenu.classList.remove("active");
+    }
+  });
     </script>
   </body>
 </html>
